@@ -1,0 +1,53 @@
+/*
+#include <iostream>
+using namespace std;
+const int Vmax = 100, Emax = Vmax * 2;
+int head[Vmax];
+int next_el[Emax];
+int terminal[Emax];
+int n, m, i, j, k, v, u;
+char r;
+void Add(int v, int u) //добавление ребра
+{
+	k = k + 1;
+	terminal[k] = u;
+	next_el[k] = head[v];
+	head[v] = k;
+}
+//главная функция
+void main()
+{
+	setlocale(LC_ALL, "Rus");
+	k = 0;
+	cout << "Кол. вершин >> "; cin >> n;
+	cout << "Кол. ребер >> "; cin >> m;
+	cout << "Вводите смежные вершины:" << endl;
+	for (i = 0; i < m; i++)
+	{
+		cin >> v >> u;
+		cout << "Ребро ориент.? (y/n) >> "; cin >> r;
+		if (r == 'y') Add(v, u);
+		else
+		{
+			Add(v, u);
+			Add(u, v);
+		}
+		cout << "..." << endl;
+	}
+	//вывод списка смежности
+	cout << "Список смежности графа:";
+	for (i = 0; i < n + 1; i++)
+	{
+		j = head[i];
+		if (i) cout << i << "->";
+		while (j > 0)
+		{
+			if (!next_el[j]) cout << terminal[j];
+			else cout << terminal[j] << ", ";
+			j = next_el[j];
+		}
+		cout << endl;
+	}
+	system("pause>>void");
+}
+*/
